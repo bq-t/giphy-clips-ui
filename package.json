@@ -1,0 +1,54 @@
+{
+  "name": "giphy-clips-ui",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/giphy-clips-ui.umd.js",
+  "module": "./dist/giphy-clips-ui.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/giphy-clips-ui.es.js",
+      "require": "./dist/giphy-clips-ui.umd.js"
+    },
+    "./styles": "./dist/giphy-clips-ui.css"
+  },
+  "scripts": {
+    "build": "vue-tsc -b && vite build",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "devDependencies": {
+    "@chromatic-com/storybook": "3.2.4",
+    "@iconify/vue": "^4.3.0",
+    "@storybook/addon-essentials": "8.5.2",
+    "@storybook/addon-interactions": "8.5.2",
+    "@storybook/addon-onboarding": "8.5.2",
+    "@storybook/blocks": "8.5.2",
+    "@storybook/test": "8.5.2",
+    "@storybook/vue3": "8.5.2",
+    "@storybook/vue3-vite": "8.5.2",
+    "@types/node": "^22.13.1",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "@vue/tsconfig": "^0.7.0",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.5.1",
+    "sass-embedded": "^1.83.4",
+    "storybook": "8.5.2",
+    "tailwindcss": "3",
+    "typescript": "~5.6.2",
+    "vite": "^6.0.5",
+    "vite-plugin-dts": "^4.5.0",
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.0",
+    "vue-tsc": "^2.2.0"
+  },
+  "peerDependencies": {
+    "tailwindcss": "^3.0.0",
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.0"
+  },
+  "packageManager": "pnpm@9.12.2+sha512.22721b3a11f81661ae1ec68ce1a7b879425a1ca5b991c975b074ac220b187ce56c708fe5db69f4c962c989452eee76c82877f4ee80f474cebd61ee13461b6228"
+}

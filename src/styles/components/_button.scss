@@ -1,0 +1,19 @@
+.gc-button {
+  @apply flex items-center;
+  @apply font-jost font-medium text-sm text-white bg-dark-gray rounded-lg;
+
+  // Modifiers
+  &_size {
+    &-sm {
+      @apply p-1.5 space-x-1.5;
+    }
+
+    &-md {
+      @apply py-2 px-3 space-x-2;
+    }
+
+    &-lg {
+      @apply py-2.5 px-3.5 space-x-2.5;
+    }
+  }
+}
