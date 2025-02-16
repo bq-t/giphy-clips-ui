@@ -1,6 +1,14 @@
 .gc-button {
   @apply flex items-center;
-  @apply font-jost font-medium text-sm text-white bg-dark-gray rounded-lg;
+  @apply font-jost font-medium text-sm text-white bg-dark-gray rounded-lg border-none cursor-pointer;
+
+  &__prepend, &__append {
+    @apply flex;
+
+    .gc-icon {
+      @apply text-white;
+    }
+  }
 
   // Modifiers
   &_size {

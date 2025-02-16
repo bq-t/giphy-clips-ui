@@ -1,14 +1,6 @@
 import { computed, type ExtractPropTypes } from 'vue'
-import {
-  type RouteLocationRaw,
-  RouterLink,
-} from 'vue-router'
-
-export interface RouterLinkProps {
-  tag?: string,
-  to?: RouteLocationRaw | string,
-  disabled?: boolean,
-}
+import type { RouterLinkProps } from '@/types'
+import { RouterLink } from 'vue-router'
 
 export const useRouterLink = (props: ExtractPropTypes<RouterLinkProps>) => {
   const {

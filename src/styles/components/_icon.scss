@@ -1,0 +1,18 @@
+.gc-icon {
+  @apply text-gray-900;
+
+  // Modifiers
+  &_size {
+    &-sm {
+      @apply text-xl;
+    }
+
+    &-md {
+      @apply text-2xl;
+    }
+
+    &-lg {
+      @apply text-3xl;
+    }
+  }
+}
