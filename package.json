@@ -1,24 +1,25 @@
 {
-  "name": "giphy-clips-ui",
-  "private": true,
+  "name": "@bq-t/giphy-clips-ui",
   "version": "1.0.0",
-  "type": "module",
-  "files": [
-    "dist"
-  ],
+  "description": "Vue 3 UI Framework",
+  "repository": "https://github.com/bq-t/giphy-clips-ui",
   "main": "./dist/giphy-clips-ui.umd.js",
   "module": "./dist/giphy-clips-ui.es.js",
-  "exports": {
-    ".": {
-      "import": "./dist/giphy-clips-ui.es.js",
-      "require": "./dist/giphy-clips-ui.umd.js"
-    },
-    "./styles": "./dist/giphy-clips-ui.css"
+  "keywords": [
+    "vuejs",
+    "vue",
+    "vue3",
+    "vue framework",
+    "ui framework"
+  ],
+  "bugs": {
+    "url": "https://github.com/bq-t/giphy-clips-ui/issues"
   },
   "scripts": {
+    "typecheck": "vue-tsc --noEmit",
     "build": "vue-tsc -b && vite build",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "serve:storybook": "storybook dev -p 6006",
+    "build:storybook": "storybook build"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "3.2.4",
@@ -47,8 +48,20 @@
   },
   "peerDependencies": {
     "tailwindcss": "^3.0.0",
-    "vue": "^3.5.13",
+    "vue": "^3.5.0",
     "vue-router": "^4.5.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/giphy-clips-ui.es.js",
+      "require": "./dist/giphy-clips-ui.umd.js"
+    },
+    "./styles": "./dist/giphy-clips-ui.css"
   },
   "packageManager": "pnpm@9.12.2+sha512.22721b3a11f81661ae1ec68ce1a7b879425a1ca5b991c975b074ac220b187ce56c708fe5db69f4c962c989452eee76c82877f4ee80f474cebd61ee13461b6228"
 }
