@@ -1,3 +1,5 @@
-export * from '@/components/Button'
-export * from '@/components/Icon'
+export * from '@/components/Button/Button.vue'
+export * from '@/components/Icon/Icon.vue'
+export * from '@/components/List/List.vue'
+export * from '@/components/List/ListItem.vue'
 export * from './utils'

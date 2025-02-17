@@ -1,0 +1,30 @@
+.gc-list-item {
+  // Basic
+  @apply flex items-center;
+  @apply bg-black py-4 px-5 space-x-5 cursor-pointer;
+
+  @apply w-max;
+  @apply lg:w-auto;
+
+  &__prepend {
+    @apply leading-[0];
+  }
+
+  &__content {
+    // Basic
+    @apply font-jost font-medium text-base text-white;
+
+    @apply hidden;
+    @apply lg:inline;
+  }
+
+  // Modifiers
+  &_active {
+    .gc-list-item {
+      &__content {
+        @apply text-transparent bg-clip-text transition duration-200;
+        background-image: linear-gradient(to right, #00CCFF 0%, #00FF99 20%, #FFF35C 40%, #FF6666 60%, #9933FF 85%);
+      }
+    }
+  }
+}

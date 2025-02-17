@@ -1,0 +1,15 @@
+.gc-list {
+  @apply flex;
+  @apply list-none p-0 m-0;
+
+  // Modifiers
+  &_type {
+    &-column {
+      @apply flex-col space-y-2.5;
+    }
+
+    &-row {
+      @apply flex-row space-x-2.5;
+    }
+  }
+}
