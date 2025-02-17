@@ -9,12 +9,16 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "pnpm"
+          cache-dependency-path: "pnpm-lock.yaml"
 
       - name: Install dependencies
-        run: npm ci
+        run: pnpm install --frozen-lockfile
 
       - name: Build the application
-        run: npm run build:storybook
+        run: pnpm build:storybook
 
       - name: Deploy Storybook
         uses: peaceiris/actions-gh-pages@v4
