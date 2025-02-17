@@ -1,18 +1,74 @@
 .gc-icon {
-  @apply text-gray-900;
+  @apply inline-block;
 
   // Modifiers
   &_size {
     &-sm {
-      @apply text-xl;
+      .gc-icon {
+        &__svg {
+          @apply text-xl;
+        }
+        &__icon {
+          @apply size-5;
+        }
+      }
     }
 
     &-md {
-      @apply text-2xl;
+      .gc-icon {
+        &__svg {
+          @apply text-2xl;
+        }
+        &__icon {
+          @apply size-6;
+        }
+      }
     }
 
     &-lg {
-      @apply text-3xl;
+      .gc-icon {
+        &__svg {
+          @apply text-3xl;
+        }
+        &__icon {
+          @apply size-[1.875rem];
+        }
+      }
+    }
+  }
+
+  &_color {
+    &-black {
+      .gc-icon__svg {
+        @apply text-black;
+      }
+    }
+
+    &-white {
+      .gc-icon__svg {
+        @apply text-white;
+      }
+    }
+
+    &-primary {
+      .gc-icon {
+        &__svg, &__mask {
+          @apply text-white size-0;
+        }
+
+        &__icon {
+          @apply inline-block;
+          background-image: conic-gradient(
+            from 180deg,
+            #00CCFF 0%,
+            #00FF99 22%,
+            #FFF35C 39%,
+            #FF6666 61%,
+            #9933FF 84%,
+            #00CCFF 100%
+          );
+        }
+      }
     }
   }
 }
