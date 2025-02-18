@@ -1,4 +1,5 @@
 /src/
+.github
 .storybook
 pnpm-lock.yaml
 postcss.config.js
