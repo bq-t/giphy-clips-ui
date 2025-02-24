@@ -1,0 +1,8 @@
+.gc-progress {
+  @apply h-2.5 w-full bg-white/25;
+
+  &__track {
+    @apply h-full transition-all;
+    background-image: linear-gradient(to right, #00CCFF 0%, #00FF99 20%, #FFF35C 40%, #FF6666 60%, #9933FF 85%);
+  }
+}
