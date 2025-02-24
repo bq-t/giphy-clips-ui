@@ -1,7 +1,6 @@
-import './styles/main.scss'
-import { createUI } from './createUI'
+import { createUI } from '@/createUI'
+import '@/styles/main.scss'
 
-export default {
-  install: createUI.install,
-  ...createUI,
-}
+export * from '@/components'
+
+export default createUI

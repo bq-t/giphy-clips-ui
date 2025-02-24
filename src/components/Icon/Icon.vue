@@ -27,16 +27,8 @@
   </i>
 </template>
 
-<script lang="ts">
-export interface IconProps {
-  name: string,
-  color?: 'black' | 'white' | 'primary',
-  size?: 'sm' | 'md' | 'lg',
-  rounded?: boolean,
-}
-</script>
-
 <script lang="ts" setup>
+import { IconProps } from './types'
 import { Icon as IconifyIcon } from '@iconify/vue'
 import { computed } from 'vue'
 

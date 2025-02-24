@@ -29,18 +29,8 @@
   </component>
 </template>
 
-<script lang="ts">
-import type { RouterLinkProps } from '@/types'
-
-export interface ButtonProps extends RouterLinkProps {
-  prependIcon?: string,
-  appendIcon?: string,
-  tag: 'button',
-  size?: 'sm' | 'md' | 'lg',
-}
-</script>
-
 <script lang="ts" setup>
+import type { ButtonProps } from './types'
 import { Icon as GcIcon } from '@/components/Icon'
 import { useRouterLink } from '@/composables'
 import { computed } from 'vue'

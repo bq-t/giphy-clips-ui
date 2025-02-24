@@ -1,5 +1,5 @@
 import { computed, getCurrentInstance, type ExtractPropTypes } from 'vue'
-import type { RouterLinkProps } from '@/types'
+import { RouterLinkProps } from '@/types/_internal/router'
 
 export const useRouterLink = (props: ExtractPropTypes<RouterLinkProps>) => {
   const {

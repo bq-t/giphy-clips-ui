@@ -1,10 +1,3 @@
-import { Button } from './Button'
-import { Icon } from './Icon'
-import { List, ListItem } from './List'
-
-export {
-  Button,
-  Icon,
-  List,
-  ListItem,
-}
+export * from '@/components/Button'
+export * from '@/components/Icon'
+export * from '@/components/List'

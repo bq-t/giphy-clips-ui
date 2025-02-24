@@ -22,17 +22,8 @@
   </component>
 </template>
 
-<script lang="ts">
-import type { RouterLinkProps } from '@/types'
-
-export interface ListItemProps extends RouterLinkProps {
-  title?: string,
-  icon?: string,
-  active?: boolean,
-}
-</script>
-
 <script lang="ts" setup>
+import { ListItemProps } from './types'
 import { Icon as GcIcon } from '@/components/Icon'
 import { useRouterLink } from '@/composables'
 import { computed } from 'vue'

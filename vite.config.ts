@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite'
 import { resolve } from 'path'
 import vue from '@vitejs/plugin-vue'
-import dtsPlugin from 'vite-plugin-dts'
+import dts from 'vite-plugin-dts'
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -11,6 +11,7 @@ export default defineConfig({
     lib: {
       entry: resolve(__dirname, 'src/index.ts'),
       name: 'GiphyClipsUI',
+      formats: ['es', 'umd'],
       fileName: format => `giphy-clips-ui.${format}.js`,
     },
     rollupOptions: {
@@ -19,6 +20,7 @@ export default defineConfig({
         'vueRouter',
       ],
       output: {
+        exports: 'named',
         globals: {
           vue: 'Vue',
         },
@@ -27,8 +29,13 @@ export default defineConfig({
   },
   plugins: [
     vue(),
-    dtsPlugin({
-      insertTypesEntry: true,
+    dts({
+      entryRoot: resolve(__dirname, 'src'),
+      include: ['src/**/*'],
+      exclude: ['src/**/*.stories.ts'],
+      outDir: 'dist/types',
+      rollupTypes: true,
+      staticImport: true,
     }),
   ],
   resolve: {

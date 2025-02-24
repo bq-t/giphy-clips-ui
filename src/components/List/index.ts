@@ -1,7 +1,4 @@
-import List from './List.vue'
-import ListItem from './ListItem.vue'
+export { default as List } from './List.vue'
+export { default as ListItem } from './ListItem.vue'
 
-export {
-  List,
-  ListItem,
-}
+export type { ListProps, ListType, ListItemProps } from './types'

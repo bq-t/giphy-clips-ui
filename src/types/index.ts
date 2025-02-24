@@ -1,5 +1,4 @@
-export * from '@/components/Button/Button.vue'
-export * from '@/components/Icon/Icon.vue'
-export * from '@/components/List/List.vue'
-export * from '@/components/List/ListItem.vue'
-export * from './utils'
+// Components
+export * from '@/components/Button/types'
+export * from '@/components/Icon/types'
+export * from '@/components/List/types'

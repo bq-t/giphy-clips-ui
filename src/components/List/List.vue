@@ -20,16 +20,8 @@
   </ul>
 </template>
 
-<script lang="ts">
-import type { ListItemProps } from '@/types'
-
-export interface ListProps {
-  items?: ListItemProps[],
-  type?: 'column' | 'row',
-}
-</script>
-
 <script lang="ts" setup>
+import { ListProps } from './types'
 import { ListItem as GcListItem } from './index'
 import { computed } from 'vue'
 
