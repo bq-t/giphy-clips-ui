@@ -6,7 +6,7 @@
     :class="computedClass"
   >
     <span
-      v-if="prependIcon"
+      v-if="prependIcon && !icon"
       class="gc-button__prepend"
     >
       <gc-icon
@@ -15,10 +15,15 @@
       />
     </span>
     <span class="gc-button__content">
-      <slot />
+      <gc-icon
+        v-if="icon"
+        :name="icon"
+        size="sm"
+      />
+      <slot v-else />
     </span>
     <span
-      v-if="appendIcon"
+      v-if="appendIcon && !icon"
       class="gc-button__append"
     >
       <gc-icon
@@ -41,9 +46,12 @@ const props = withDefaults(defineProps<ButtonProps>(), {
 })
 
 const { computedTag, computedLinkAttributes } = useRouterLink(props)
-const computedClass = computed(() => ({
-  sm: 'gc-button_size-sm',
-  md: 'gc-button_size-md',
-  lg: 'gc-button_size-lg',
-})[props.size])
+const computedClass = computed(() => ([
+  {
+    sm: 'gc-button_size-sm',
+    md: 'gc-button_size-md',
+    lg: 'gc-button_size-lg',
+  }[props.size],
+  { 'gc-button_icon': props.icon },
+]))
 </script>

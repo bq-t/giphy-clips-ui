@@ -23,10 +23,30 @@ export default {
   },
 } as Meta<typeof Button>
 
-export const DefaultButton: StoryObj<typeof Button> = (args) => ({
-  components: { Button },
-  setup() {
-    return { args }
+export const DefaultButton: StoryObj<typeof Button> = {
+  args: {
+    prependIcon: 'star-outline',
+    color: 'black',
   },
-  template: '<Button v-bind="args">Button</Button>',
-})
+  render: (args) => ({
+    components: { Button },
+    setup() {
+      return { args }
+    },
+    template: '<Button v-bind="args">Button</Button>'
+  })
+}
+
+export const IconButton: StoryObj<typeof Button> = {
+  args: {
+    icon: 'star-outline',
+    color: 'black',
+  },
+  render: (args) => ({
+    components: { Button },
+    setup() {
+      return { args }
+    },
+    template: '<Button v-bind="args" />',
+  }),
+}

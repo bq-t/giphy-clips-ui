@@ -1,12 +1,12 @@
 .gc-icon {
-  @apply inline-block leading-[0];
+  @apply flex;
 
   // Modifiers
   &_size {
     &-sm {
       .gc-icon {
         &__svg {
-          @apply text-xl;
+          @apply text-xl leading-[0];
         }
         &__icon {
           @apply size-5;
@@ -17,7 +17,7 @@
     &-md {
       .gc-icon {
         &__svg {
-          @apply text-2xl;
+          @apply text-2xl leading-[0];
         }
         &__icon {
           @apply size-6;
@@ -28,7 +28,7 @@
     &-lg {
       .gc-icon {
         &__svg {
-          @apply text-3xl;
+          @apply text-3xl leading-[0];
         }
         &__icon {
           @apply size-[1.875rem];
