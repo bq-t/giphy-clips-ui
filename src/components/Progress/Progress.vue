@@ -8,9 +8,10 @@
 </template>
 
 <script lang="ts" setup>
+import type { ProgressModel } from './types'
 import { computed } from 'vue'
 
-const modelValue = defineModel<number>({
+const modelValue = defineModel<ProgressModel>({
   default: 0,
 })
 

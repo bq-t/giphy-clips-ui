@@ -1,0 +1,11 @@
+.gc-volume-control {
+  @apply flex items-center w-max;
+
+  &__icon {
+    @apply cursor-pointer;
+  }
+
+  &__slider {
+    @apply bg-black/20 ml-2.5 p-2.5 box-border max-w-24 rounded-full;
+  }
+}

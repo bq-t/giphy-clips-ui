@@ -1,7 +1,7 @@
 <template>
   <div class="gc-slider">
     <input
-      v-model="modelValue"
+      v-model.number="modelValue"
       class="gc-slider__input"
       type="range"
       :step="step"
@@ -19,7 +19,7 @@
 import type { SliderProps, SliderModel } from './types'
 import { computed } from 'vue'
 
-const props = withDefaults(defineProps<SliderProps>(), {
+withDefaults(defineProps<SliderProps>(), {
   step: 1,
   min: 0,
   max: 100,
