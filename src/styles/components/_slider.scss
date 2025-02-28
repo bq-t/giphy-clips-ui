@@ -1,0 +1,18 @@
+.gc-slider {
+  @apply relative flex;
+
+  &__input {
+    @apply appearance-none m-0 z-10;
+    @apply h-1 w-full bg-white/25 rounded-full;
+
+    &::-webkit-slider-thumb {
+      @apply appearance-none;
+      @apply bg-white size-2 ring-4 ring-white rounded-full cursor-pointer;
+    }
+  }
+
+  &__progress {
+    @apply w-[var(--progressWidth)];
+    @apply absolute bg-white h-1 rounded-full;
+  }
+}
