@@ -18,6 +18,7 @@
       <gc-icon
         v-if="icon"
         :name="icon"
+        :color="color === 'primary' ? 'primary' : 'white'"
         size="sm"
       />
       <slot v-else />
@@ -41,6 +42,7 @@ import { useRouterLink } from '@/composables'
 import { computed } from 'vue'
 
 const props = withDefaults(defineProps<ButtonProps>(), {
+  color: 'black',
   tag: 'button',
   size: 'md',
 })

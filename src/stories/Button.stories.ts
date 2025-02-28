@@ -15,6 +15,11 @@ export default {
       options: ['local-fire-department-outline', 'explore-outline'],
       defaultValue: null,
     },
+    color: {
+      control: { type: 'select' },
+      options: ['primary', 'black'],
+      defaultValue: 'black',
+    },
     size: {
       control: { type: 'select' },
       options: ['sm', 'md', 'lg'],
