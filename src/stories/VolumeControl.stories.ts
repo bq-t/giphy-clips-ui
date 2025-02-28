@@ -18,3 +18,17 @@ export const DefaultVolumeControl: StoryObj<typeof VolumeControl> = {
     template: '<VolumeControl v-bind="args" />',
   }),
 }
+
+export const AlwaysVisibleVolumeControl: StoryObj<typeof VolumeControl> = {
+  args: {
+    modelValue: 20,
+    alwaysShowVolume: true,
+  },
+  render: (args) => ({
+    components: { VolumeControl },
+    setup() {
+      return { args }
+    },
+    template: '<VolumeControl v-bind="args" />',
+  }),
+}

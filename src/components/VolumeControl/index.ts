@@ -1,2 +1,2 @@
 export { default as VolumeControl } from './VolumeControl.vue'
-export type { VolumeControlModel } from './types'
+export type { VolumeControlModel, VolumeControlProps } from './types'
