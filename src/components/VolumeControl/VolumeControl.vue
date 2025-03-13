@@ -40,7 +40,7 @@ function switchVolume() {
 }
 
 const volumeVisible = ref(props.alwaysShowVolume)
-function changeVolumeVisible(visible) {
+function changeVolumeVisible(visible: boolean) {
   if (props.alwaysShowVolume) {
     return
   }
