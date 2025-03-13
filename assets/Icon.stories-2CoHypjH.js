@@ -1,4 +1,4 @@
-import{_ as a}from"./Icon-CdlcyPIi.js";import"./vue.esm-bundler-CBjxpMWX.js";const p={title:"Icon",component:a,argTypes:{color:{controls:{type:"select"},options:["black","white","primary"],defaultValue:"black"},size:{controls:{type:"select"},options:["sm","md","lg"],defaultValue:"md"}}},e={args:{name:"star",color:"black",size:"lg",rounded:!0},render:o=>({components:{Icon:a},setup(){return{args:o}},template:`
+import{_ as a}from"./Icon-BgMhhbLX.js";import"./vue.esm-bundler-D3d-ZV0z.js";const p={title:"Icon",component:a,argTypes:{color:{controls:{type:"select"},options:["black","white","primary"],defaultValue:"black"},size:{controls:{type:"select"},options:["sm","md","lg"],defaultValue:"md"}}},e={args:{name:"star",color:"black",size:"lg",rounded:!0},render:o=>({components:{Icon:a},setup(){return{args:o}},template:`
       <div :style="{ display: 'flex', alignItems: 'center' }">
         <Icon v-bind="args" />
         <Icon name="star" color="black" size="md" />
