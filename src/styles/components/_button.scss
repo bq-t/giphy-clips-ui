@@ -1,5 +1,5 @@
 .gc-button {
-  @apply flex items-center;
+  @apply flex items-center relative overflow-hidden;
   @apply bg-dark-gray rounded-lg border-none cursor-pointer;
 
   &__prepend, &__append {
@@ -12,6 +12,11 @@
 
   &__content {
     @apply font-jost font-medium text-sm text-white;
+  }
+
+  &__overlay {
+    @apply m-0 #{!important};
+    @apply absolute left-0 top-0 w-full h-full;
   }
 
   // Modifiers
@@ -39,5 +44,13 @@
 
   &_icon {
     @apply rounded-full;
+  }
+
+  &:disabled {
+    @apply cursor-not-allowed;
+
+    .gc-button__overlay {
+      @apply bg-black/50;
+    }
   }
 }

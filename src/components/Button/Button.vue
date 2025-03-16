@@ -4,6 +4,7 @@
     v-bind="computedLinkAttributes"
     class="gc-button"
     :class="computedClass"
+    :disabled="disabled"
   >
     <span
       v-if="prependIcon && !icon"
@@ -32,6 +33,7 @@
         :name="appendIcon"
       />
     </span>
+    <div class="gc-button__overlay" />
   </component>
 </template>
 
@@ -45,6 +47,7 @@ const props = withDefaults(defineProps<ButtonProps>(), {
   color: 'black',
   tag: 'button',
   size: 'md',
+  disabled: false,
 })
 
 const { computedTag, computedLinkAttributes } = useRouterLink(props)

@@ -32,6 +32,7 @@ export const DefaultButton: StoryObj<typeof Button> = {
   args: {
     prependIcon: 'star-outline',
     color: 'black',
+    disabled: false,
   },
   render: (args) => ({
     components: { Button },
@@ -46,6 +47,7 @@ export const IconButton: StoryObj<typeof Button> = {
   args: {
     icon: 'star-outline',
     color: 'black',
+    disabled: false,
   },
   render: (args) => ({
     components: { Button },
