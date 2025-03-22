@@ -4,7 +4,7 @@
     v-bind="computedLinkAttributes"
     class="gc-button"
     :class="computedClass"
-    :disabled="disabled"
+    :disabled="disabled || loading"
   >
     <span
       v-if="prependIcon && !icon"
@@ -47,6 +47,7 @@ const props = withDefaults(defineProps<ButtonProps>(), {
   color: 'black',
   tag: 'button',
   size: 'md',
+  loading: false,
   disabled: false,
 })
 
@@ -57,6 +58,8 @@ const computedClass = computed(() => ([
     md: 'gc-button_size-md',
     lg: 'gc-button_size-lg',
   }[props.size],
+  { 'gc-button_loading': props.loading },
+  { 'gc-button_disabled': props.disabled },
   { 'gc-button_icon': props.icon },
 ]))
 </script>

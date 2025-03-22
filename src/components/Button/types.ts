@@ -9,4 +9,5 @@ export interface ButtonProps extends RouterLinkProps {
   icon?: string,
   color?: ButtonColor,
   size?: ButtonSize,
+  loading?: boolean,
 }

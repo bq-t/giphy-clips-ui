@@ -39,7 +39,13 @@ export const DefaultButton: StoryObj<typeof Button> = {
     setup() {
       return { args }
     },
-    template: '<Button v-bind="args">Button</Button>'
+    template: `
+      <div :style="{ display: 'flex', alignItems: 'center', gap: '1rem' }">
+        <Button v-bind="args">Button</Button>
+        <Button v-bind="args" loading>Loading Button</Button>
+        <Button v-bind="args" disabled>Disabled Button</Button>
+      </div>
+    `,
   }),
 }
 
@@ -47,6 +53,7 @@ export const IconButton: StoryObj<typeof Button> = {
   args: {
     icon: 'star-outline',
     color: 'black',
+    loading: false,
     disabled: false,
   },
   render: (args) => ({
@@ -54,6 +61,12 @@ export const IconButton: StoryObj<typeof Button> = {
     setup() {
       return { args }
     },
-    template: '<Button v-bind="args" />',
+    template: `
+      <div :style="{ display: 'flex', alignItems: 'center', gap: '1rem' }">
+        <Button v-bind="args" />
+        <Button v-bind="args" loading />
+        <Button v-bind="args" disabled />
+      </div>
+    `,
   }),
 }

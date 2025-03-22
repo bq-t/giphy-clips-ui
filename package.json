@@ -1,6 +1,6 @@
 {
   "name": "@bq-t/giphy-clips-ui",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Vue 3 UI Framework",
   "repository": "https://github.com/bq-t/giphy-clips-ui",
   "main": "./dist/giphy-clips-ui.umd.js",

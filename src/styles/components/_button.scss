@@ -46,7 +46,15 @@
     @apply rounded-full;
   }
 
-  &:disabled {
+  &_loading {
+    @apply cursor-wait;
+
+    .gc-button__overlay {
+      @apply bg-black/50 animate-pulse;
+    }
+  }
+
+  &_disabled {
     @apply cursor-not-allowed;
 
     .gc-button__overlay {
