@@ -5,9 +5,14 @@
     @apply appearance-none m-0 z-10;
     @apply h-1 w-full bg-white/25 rounded-full;
 
-    &::-webkit-slider-thumb {
+    @mixin thumb {
+      &::-moz-range-thumb { @content; }
+      &::-webkit-slider-thumb { @content; }
+    }
+
+    @include thumb {
       @apply appearance-none;
-      @apply bg-white size-2 ring-4 ring-white rounded-full cursor-pointer;
+      @apply bg-white border-0 size-2 ring-4 ring-white rounded-full cursor-pointer;
     }
   }
 
