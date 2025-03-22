@@ -27,6 +27,7 @@ import { ListItemProps } from './types'
 import { Icon as GcIcon } from '@/components/Icon'
 import { useRouterLink } from '@/composables'
 import { computed } from 'vue'
+import { useLink } from 'vue-router'
 
 const props = withDefaults(defineProps<ListItemProps>(), {
   tag: 'li',
@@ -37,8 +38,16 @@ const props = withDefaults(defineProps<ListItemProps>(), {
 
 const { computedTag, computedLinkAttributes } = useRouterLink(props)
 const computedClass = computed(() => ([
-  { 'gc-list-item_active': props.active },
+  { 'gc-list-item_active': computedActive.value },
 ]))
 
-const computedIconColor = computed(() => props.active ? 'primary' : 'white')
+const { isExactActive: isRouteExactActive } = useLink(props)
+const computedActive = computed(() => {
+  if (!props.to) {
+    return props.active
+  }
+  return isRouteExactActive.value
+})
+
+const computedIconColor = computed(() => computedActive.value ? 'primary' : 'white')
 </script>
