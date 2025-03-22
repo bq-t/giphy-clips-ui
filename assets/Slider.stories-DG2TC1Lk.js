@@ -1,4 +1,4 @@
-import{_ as s}from"./Slider-Iym2O4X2.js";import"./vue.esm-bundler-D3d-ZV0z.js";const i={title:"Slider",component:s},e={args:{modelValue:20},render:a=>({components:{Slider:s},setup(){return{args:a}},template:`
+import{_ as s}from"./Slider-D2fceSi5.js";import"./vue.esm-bundler-BnJXRzna.js";const i={title:"Slider",component:s},e={args:{modelValue:20},render:a=>({components:{Slider:s},setup(){return{args:a}},template:`
       <div style="width: 500px;">
         <Slider v-bind="args" />
       </div>
