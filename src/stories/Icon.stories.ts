@@ -10,11 +10,6 @@ export default {
       options: ['black', 'white', 'primary'],
       defaultValue: 'black',
     },
-    size: {
-      controls: { type: 'select' },
-      options: ['sm', 'md', 'lg'],
-      defaultValue: 'md',
-    },
   },
 } as Meta<typeof Icon>
 

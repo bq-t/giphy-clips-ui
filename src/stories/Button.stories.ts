@@ -40,7 +40,7 @@ export const DefaultButton: StoryObj<typeof Button> = {
       return { args }
     },
     template: '<Button v-bind="args">Button</Button>'
-  })
+  }),
 }
 
 export const IconButton: StoryObj<typeof Button> = {
