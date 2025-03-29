@@ -29,8 +29,8 @@ export const Colors: StoryObj<typeof Button> = {
     ...Base.render(args),
     template: `
       <div :style="{ display: 'flex', alignItems: 'center', gap: '1rem' }">
-        <Button v-bind="args" size="primary">Small</Button>
-        <Button v-bind="args" size="black">Medium</Button>
+        <Button v-bind="args" color="primary" />
+        <Button v-bind="args" color="black" />
       </div>
     `,
   }),
@@ -56,8 +56,8 @@ export const Loading: StoryObj<typeof Button> = {
     ...Base.render(args),
     template: `
       <div :style="{ display: 'flex', alignItems: 'center', gap: '1rem' }">
-        <Button v-bind="args" size="primary" loading />
-        <Button v-bind="args" size="black" loading />
+        <Button v-bind="args" color="primary" loading />
+        <Button v-bind="args" color="black" loading />
       </div>
     `,
   }),
@@ -69,8 +69,8 @@ export const Disabled: StoryObj<typeof Button> = {
     ...Base.render(args),
     template: `
       <div :style="{ display: 'flex', alignItems: 'center', gap: '1rem' }">
-        <Button v-bind="args" size="primary" disabled />
-        <Button v-bind="args" size="black" disabled />
+        <Button v-bind="args" color="primary" disabled />
+        <Button v-bind="args" color="black" disabled />
       </div>
     `,
   }),
