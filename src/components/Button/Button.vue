@@ -51,7 +51,7 @@ const props = withDefaults(defineProps<ButtonProps>(), {
   disabled: false,
 })
 
-const { computedTag, computedLinkAttributes } = useRouterLink(props)
+const { computedTag, computedLinkAttributes } = useRouterLink({ ...props })
 const computedClass = computed(() => ([
   {
     sm: 'gc-button_size-sm',

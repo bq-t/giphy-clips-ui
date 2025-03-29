@@ -1,17 +1,17 @@
 <template>
-  <div class="gc-progress">
+  <div class="gc-progressbar">
     <div
-      class="gc-progress__track"
+      class="gc-progressbar__track"
       :style="computedTrackStyle"
     />
   </div>
 </template>
 
 <script lang="ts" setup>
-import type { ProgressModel } from './types'
+import type { ProgressbarModel } from './types'
 import { computed } from 'vue'
 
-const modelValue = defineModel<ProgressModel>({
+const modelValue = defineModel<ProgressbarModel>({
   default: 0,
 })
 

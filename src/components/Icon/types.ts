@@ -1,5 +1,5 @@
 export type IconColor = 'black' | 'white' | 'primary'
-export type IconSize = string | number
+export type IconSize = 'sm' | 'md' | 'lg' | number
 
 export interface IconProps {
   name: string,

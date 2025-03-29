@@ -1,36 +1,35 @@
 <template>
   <div
-    class="gc-volume-control"
+    class="gc-volume-input"
     @mouseenter="() => changeVolumeVisible(true)"
     @mouseleave="() => changeVolumeVisible(false)"
   >
     <gc-icon
-      class="gc-volume-control__icon"
+      class="gc-volume-input__icon"
       role="button"
       :name="computedIconName"
       @click="switchVolume"
     />
     <div
       v-show="volumeVisible"
-      class="gc-volume-control__slider"
+      class="gc-volume-input__slider"
     >
-      <gc-slider v-model="modelValue" />
+      <gc-range-input v-model="modelValue" />
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
-import type { VolumeControlModel, VolumeControlProps } from './types'
-import { Icon as GcIcon } from '@/components/Icon'
-import { Slider as GcSlider } from '@/components/Slider'
+import type { VolumeInputProps, VolumeInputModel } from './types'
+import { Icon as GcIcon, RangeInput as GcRangeInput } from '@/components'
 import { computed, ref } from 'vue'
 
-const modelValue = defineModel<VolumeControlModel>({
+const modelValue = defineModel<VolumeInputModel>({
   default: 50,
 })
 
-const props = withDefaults(defineProps<VolumeControlProps>(), {
-  alwaysShowVolume: false,
+const props = withDefaults(defineProps<VolumeInputProps>(), {
+  expanded: false,
 })
 
 const computedIconName = computed(() => modelValue.value <= 0 ? 'volume-off' : 'volume-up-outline')
@@ -39,9 +38,9 @@ function switchVolume() {
   modelValue.value = modelValue.value > 0 ? 0 : 50
 }
 
-const volumeVisible = ref(props.alwaysShowVolume)
+const volumeVisible = ref(props.expanded)
 function changeVolumeVisible(visible: boolean) {
-  if (props.alwaysShowVolume) {
+  if (props.expanded) {
     return
   }
   volumeVisible.value = visible

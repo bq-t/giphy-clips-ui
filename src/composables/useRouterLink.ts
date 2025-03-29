@@ -1,5 +1,6 @@
-import { computed, getCurrentInstance, type ExtractPropTypes } from 'vue'
-import { RouterLinkProps } from '@/types/_internal/router'
+import { computed, getCurrentInstance, toRef, type ExtractPropTypes } from 'vue'
+import { useLink } from 'vue-router'
+import type { RouterLinkProps } from '@/types/_internal/router'
 
 export const useRouterLink = (props: ExtractPropTypes<RouterLinkProps>) => {
   const {
@@ -42,8 +43,24 @@ export const useRouterLink = (props: ExtractPropTypes<RouterLinkProps>) => {
     exactActiveClass,
   })
 
+  const computedLinkProps = computed(() => ({
+    ...props,
+    to: toRef(() => to || ''),
+  }))
+
+  const { isActive: linkIsActive, isExactActive: linkIsExactActive } = useLink(computedLinkProps.value)
+  const isActive = computed(() => {
+    if (disabled || !to || vueRouter.value === undefined) {
+      return false
+    }
+    return exact
+      ? linkIsExactActive.value
+      : linkIsActive.value
+  })
+
   return {
     computedTag,
     computedLinkAttributes,
+    isActive,
   }
 }
