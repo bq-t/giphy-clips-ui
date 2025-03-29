@@ -3,7 +3,7 @@ import { create } from '@storybook/theming'
 export const dark = create({
   base: 'dark',
   brandTitle: 'GiphyClips UI',
-  brandImage: '/images/Logotype.svg',
+  brandImage: '/giphy-clips-ui/images/Logotype.svg',
   brandUrl: 'https://github.com/bq-t/giphy-clips-ui',
   brandTarget: '_blank',
 
