@@ -1,0 +1,1 @@
+const e={parameters:{controls:{expanded:!0},layout:"centered",viewport:{viewports:{mobile:{name:"Mobile",styles:{width:"390px",height:"844px"}},tablet:{name:"Tablet",styles:{width:"1024px",height:"1366px"}},desktop:{name:"Desktop",styles:{width:"1920px",height:"945px"}}}}}};export{e as default};
