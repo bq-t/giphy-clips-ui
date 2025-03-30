@@ -1,4 +1,4 @@
-import{_ as a}from"./RangeInput-Bqcw-HSd.js";import"./vue.esm-bundler-D_7b7RA_.js";const d={title:"Forms/RangeInput",component:a},n={args:{modelValue:0},render:r=>({components:{RangeInput:a},setup:()=>({args:r}),template:`
+import{_ as a}from"./RangeInput-CbMtXzHU.js";import"./vue.esm-bundler-22DNFjOf.js";const d={title:"Forms/RangeInput",component:a},n={args:{modelValue:0},render:r=>({components:{RangeInput:a},setup:()=>({args:r}),template:`
       <div style="width: 500px;">
         <RangeInput v-bind="args" />
       </div>

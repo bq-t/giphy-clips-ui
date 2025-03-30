@@ -1,4 +1,4 @@
-import{_ as g}from"./Progressbar-DZHZZHFR.js";import"./vue.esm-bundler-D_7b7RA_.js";const P={title:"Components/Progressbar",component:g},e={args:{modelValue:0},render:u=>({components:{Progressbar:g},setup:()=>({args:u}),template:`
+import{_ as g}from"./Progressbar-DCIi9hIS.js";import"./vue.esm-bundler-22DNFjOf.js";const P={title:"Components/Progressbar",component:g},e={args:{modelValue:0},render:u=>({components:{Progressbar:g},setup:()=>({args:u}),template:`
       <div style="width: 500px;">
         <Progressbar v-bind="args" />
       </div>

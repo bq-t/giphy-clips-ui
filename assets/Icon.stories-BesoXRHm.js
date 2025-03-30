@@ -1,4 +1,4 @@
-import{_ as p}from"./Icon-DhqAEP68.js";import"./vue.esm-bundler-D_7b7RA_.js";const l={title:"Components/Icon",component:p},r={args:{name:"star"},render:o=>({components:{Icon:p},setup:()=>({args:o}),template:'<Icon v-bind="args" />'})},e={...r,render:o=>({...r.render(o),template:`
+import{_ as p}from"./Icon-kn0Px43-.js";import"./vue.esm-bundler-22DNFjOf.js";const l={title:"Components/Icon",component:p},r={args:{name:"star"},render:o=>({components:{Icon:p},setup:()=>({args:o}),template:'<Icon v-bind="args" />'})},e={...r,render:o=>({...r.render(o),template:`
       <div style="display: flex; align-items: center; gap: 1rem;">
         <Icon v-bind="args" color="black" />
         <Icon v-bind="args" color="white" />
