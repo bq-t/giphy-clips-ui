@@ -1,0 +1,33 @@
+.gc-badge {
+  @apply font-jost font-medium rounded-full;
+
+  // Modifiers
+  &_size {
+    &-sm {
+      @apply text-xs py-1 px-2;
+    }
+
+    &-md {
+      @apply text-sm py-1 px-2;
+    }
+
+    &-lg {
+      @apply text-sm py-1.5 px-2.5;
+    }
+  }
+
+  &_color {
+    &-black {
+      @apply text-white bg-black;
+    }
+
+    &-primary {
+      @apply bg-black;
+
+      .gc-badge__label {
+        @apply text-transparent bg-clip-text;
+        background-image: linear-gradient(to right, #00CCFF 0%, #00FF99 20%, #FFF35C 40%, #FF6666 60%, #9933FF 85%);
+      }
+    }
+  }
+}
